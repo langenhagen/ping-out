@@ -1,0 +1,9 @@
+[Unit]
+Description=My, andreasl's, ping-out systemd service.
+
+[Service]
+Type=simple
+ExecStart=*WILL BE SET UPON INSTALLATION*
+
+[Install]
+WantedBy=multi-user.target
