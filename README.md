@@ -33,9 +33,8 @@ To install the `systemd` service on `Ubuntu`, run:
 sudo bash setup-systemd-service.sh
 ```
 
-This copies the file `ping-out.service` into the directories of the `systemd` installation and links
-the script `ping-out.sh`'s path into the copied service. The script then needs to stay at the path
-where it was when the service has been set up.
+This copies the script `ping-out.sh` into the directory `/usr/local/bin` and the file
+`ping-out.service` into the directories of the `systemd` installation.
 
 After installation, you may control the service via typical `systemd` commands:
 ```bash
@@ -45,6 +44,9 @@ sudo systemctl stop ping-out
 sudo systemctl restart ping-out
 sudo systemctl status ping-out
 ```
+
+If you want to make changes to the program, change the script and replace the script file in
+`/usr/local/bin/`.
 
 
 ## Contributing

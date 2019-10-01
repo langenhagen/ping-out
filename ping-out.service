@@ -3,7 +3,7 @@ Description=My, andreasl's, ping-out systemd service.
 
 [Service]
 Type=simple
-ExecStart=*WILL BE SET UPON INSTALLATION*
+ExecStart=/bin/bash /usr/local/bin/ping-out.sh
 
 [Install]
 WantedBy=multi-user.target
