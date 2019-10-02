@@ -5,7 +5,7 @@
 # author: andreasl
 set -e
 
-if ! command -v systemd >/dev/null ; then
+if ! command -v systemd >/dev/null; then
     printf 'Error: systemd not found.\n'
     exit 1
 fi
