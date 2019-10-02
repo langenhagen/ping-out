@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Setup a systemd service that can run the script ping-out.sh
+# Setup a systemd service that can run the script ping-out.sh.
 #
 # author: andreasl
 set -e
