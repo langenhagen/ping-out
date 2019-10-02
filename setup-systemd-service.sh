@@ -5,6 +5,11 @@
 # author: andreasl
 set -e
 
+if ! command -v systemd >/dev/null ; then
+    printf 'Error: systemd not found.\n'
+    exit 1
+fi
+
 sudo cp -v 'ping-out.sh' '/usr/local/bin'
 sudo cp -v 'ping-out.service' '/lib/systemd/system'
 
