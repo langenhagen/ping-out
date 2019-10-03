@@ -23,18 +23,19 @@ You can detach the script from the terminal session and run it in the background
 nohup ./ping-out.sh &
 ```
 
-### Running the Script as a Daemon
-The script `setup-systemd-service.sh` can set up the `systemd` service on `Ubuntu`.
-This allows for autostart and running in the backgorund.
-On other platforms than `Ubuntu`, you might have to adjust the script.
+### Running `ping-out` as a Service
+The script `setup-systemd-service.sh` can set up the service on platforms that support `systemd`,
+e.g. `Ubuntu`.
+Running `ping-out.sh` as a service allows for autostart and running in the backgorund.
 
-To install the `systemd` service on `Ubuntu`, run:
+To install the `systemd` service for `ping-out` on `Ubuntu`, run:
 ```bash
 sudo bash setup-systemd-service.sh
 ```
 
 This copies the script `ping-out.sh` into the directory `/usr/local/bin` and the file
 `ping-out.service` into the directories of the `systemd` installation.
+On other platforms than `Ubuntu`, you might have to adjust the setup-script.
 
 After installation, you may control the service via typical `systemd` commands:
 ```bash
